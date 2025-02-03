@@ -1,0 +1,298 @@
+Step  initial remote button
+import React from "react";
+
+const Step2 = () => {
+  return (
+    <div className="form-step col-md-10 col-11 active" id="step-2">
+      <div className="row">
+        <div className="col-md-2 step-count">
+          <span>02</span>
+        </div>
+        <div className="col-md-10 py-2 px-4">
+          <h4></h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Assumenda possimus esse tenetur!
+          </p>
+          <div className="df-img-btns mt-3">
+            <div className="row loannames rdo_select">
+              <div className="col-auto mb-3 mb-md-0">
+                <input
+                  type="radio"
+                  id="mudra"
+                  name="ltype"
+                  value="mudra"
+                  required
+                  className="btn-check mustsel"
+                  autoComplete="off"
+                  defaultChecked
+                />
+                <label htmlFor="mudra" className="btn btn-outline-primary mr-3 text-center inp4">
+                  Option 1
+                </label>
+              </div>
+              <div className="col-auto mb-3 mb-md-0">
+                <input
+                  type="radio"
+                  id="sme"
+                  name="ltype"
+                  value="sme"
+                  required
+                  className="btn-check mustsel"
+                  autoComplete="off"
+                />
+                <label htmlFor="sme" className="btn btn-outline-primary mr-3 text-center inp4">
+                  Option 2
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Step2;
+
+
+Initial step 3 checkbox
+import React from "react";
+
+const Step3 = () => {
+  return (
+    <div className="form-step col-md-10 col-11 active" id="step-3">
+      <div className="row">
+        <div className="col-md-2 step-count">
+          <span>03</span>
+        </div>
+        <div className="col-md-10 py-2 px-4">
+          <h4>Lorem ipsum</h4>
+          <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit.</p>
+          {[1, 2, 3, 4, 5].map((num) => (
+            <div className="form-check" key={num}>
+              <input
+                className="form-check-input small-radio"
+                type="checkbox"
+                value={`l${num}`}
+                id={`flexCheck${num}`}
+                name="toggleField"
+              />
+              <label className="form-check-label small-label" htmlFor={`flexCheck${num}`}>
+                Checkbox {num}
+              </label>
+              <input
+                type="number"
+                id={`l${num}`}
+                className="d-none 3f-div"
+                name="number"
+                placeholder="Enter Your Number"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+	
+export default Step3;
+
+
+Manufacturing Icon - https://www.finline.in/assets/v3/img/manufacturing.svg
+Service - https://www.finline.in/assets/v3/img/manufacturing.svg
+trading https://www.finline.in/assets/v3/img/manufacturing.svg
+agricultute - https://www.finline.in/assets/v3/img/agriculture.svg
+<div class="col-lg-4 col-12 mt-2">
+					<input type="radio" id="is_tl" name="loan" value="tl" data-ltype="tl" class="btn-check mustsel" autocomplete="off" required="">
+					<label for="is_tl" class="col-lg-12 col-12 btn btn-outline-primary me-3  inp5">
+						<span class="d-block mt-3"><img src="https://www.finline.in/assets/v3/img/land.svg" height="32" alt="Land-Icon">&nbsp;<img src="https://www.finline.in/assets/v3/img/machinary.svg" height="32" alt="Machinary-Icon">&nbsp;<img src="https://www.finline.in/assets/v3/img/computer.svg" height="32" alt="Computer-Icon">&nbsp;<img src="https://www.finline.in/assets/v3/img/vehicle.svg" height="32" alt="Vehicle-Icon"></span>
+						<h6 class="mt-3 mb-0">Term Loan</h6>
+						<small class="df-lh d-none d-md-block">Eg. Buy Land, Machinery, Computer, Vehicle etc. for the business.</small>
+					</label>
+				</div>
+
+
+
+<span class="d-block mt-3">
+							<img src="https://www.finline.in/assets/v3/img/stock.svg" height="32" alt="Stock-Icon">&nbsp;<img src="https://www.finline.in/assets/v3/img/calculator.svg" height="32" alt="Calculator-Icon"></span>
+
+
+Step 6:initial 
+
+
+
+Step 6
+
+
+
+<div class="col pt-5 pb-5">
+		<h5 class="mb-0"><span class="d-inline-block d-md-none">6. </span>What all do you need?</h5>
+		<small class="df-lh d-none d-md-block">Please select all that you need</small>
+		<input type="hidden" name="spam" id="spam">
+		 
+		 	<div class="form-check mt-3">
+		 		
+				<input type="checkbox" class="form-check-input inp6 mustsel" id="land" value="1" name="land_k">
+				<label class="form-check-label" for="land">Land</label>
+				<div class="form-group mt-2">
+					 
+					
+					<input type="number" data-ref="land" class="form-control pnum invexp" id="landval" name="land_v" placeholder="Estimated cost?" autocomplete="off" value="" required="required">
+				</div>
+				 
+			</div>
+	         
+	     
+		 	<div class="form-check mt-3">
+		 		
+				<input type="checkbox" class="form-check-input inp6 mustsel" id="building" value="1" name="building_k">
+				<label class="form-check-label" for="building">Shed/building</label>
+				<div class="form-group mt-2 d-none">
+					 
+					
+					<input type="number" data-ref="building" class="form-control pnum invexp" id="buildingval" name="building_v" placeholder="Estimated cost?" autocomplete="off" value="">
+				</div>
+				 
+			</div>
+	         
+	     
+		 	<div class="form-check mt-3">
+		 		
+				<input type="checkbox" class="form-check-input inp6 mustsel" id="m_machinery" value="1" name="m_machinery_k">
+				<label class="form-check-label" for="m_machinery">Machinery</label>
+				<div class="form-group mt-2 d-none">
+					 
+					
+					<input type="number" data-ref="m_machinery" class="form-control pnum invexp" id="m_machineryval" name="m_machinery_v" placeholder="Estimated cost?" autocomplete="off" value="">
+				</div>
+				 
+			</div>
+	         
+	     
+		 	<div class="form-check mt-3">
+		 		
+				<input type="checkbox" class="form-check-input inp6 mustsel" id="computers" value="1" name="computers_k">
+				<label class="form-check-label" for="computers">Computers/laptops &amp; printers</label>
+				<div class="form-group mt-2 d-none">
+					 
+					
+					<input type="number" data-ref="computers" class="form-control pnum invexp" id="computersval" name="computers_v" placeholder="Estimated cost?" autocomplete="off" value="">
+				</div>
+				 
+			</div>
+	         
+	     
+		 	<div class="form-check mt-3">
+		 		
+				<input type="checkbox" class="form-check-input inp6 mustsel" id="furniture" value="1" name="furniture_k">
+				<label class="form-check-label" for="furniture">Furniture &amp; fixtures</label>
+				<div class="form-group mt-2">
+					 
+					
+					<input type="number" data-ref="furniture" class="form-control pnum invexp" id="furnitureval" name="furniture_v" placeholder="Estimated cost?" autocomplete="off" value="" required="required">
+				</div>
+				 
+			</div>
+	         
+	     
+		 	<div class="form-check mt-3">
+		 		
+				<input type="checkbox" class="form-check-input inp6 mustsel" id="electrification" value="1" name="electrification_k">
+				<label class="form-check-label" for="electrification">Electrification &amp; electricity backup</label>
+				<div class="form-group mt-2">
+					 
+					
+					<input type="number" data-ref="electrification" class="form-control pnum invexp" id="electrificationval" name="electrification_v" placeholder="Estimated cost?" autocomplete="off" value="" required="required">
+				</div>
+				 
+			</div>
+	         
+	     
+		 	<div class="form-check mt-3">
+		 		
+				<input type="checkbox" class="form-check-input inp6 mustsel" id="racks" value="1" name="racks_k">
+				<label class="form-check-label" for="racks">Racks &amp; storage</label>
+				<div class="form-group mt-2">
+					 
+					
+					<input type="number" data-ref="racks" class="form-control pnum invexp" id="racksval" name="racks_v" placeholder="Estimated cost?" autocomplete="off" value="" required="required">
+				</div>
+				 
+			</div>
+	         
+	     
+		 	<div class="form-check mt-3">
+		 		
+				<input type="checkbox" class="form-check-input inp6 mustsel" id="transportation" value="1" name="transportation_k">
+				<label class="form-check-label" for="transportation">Transportation cost</label>
+				<div class="form-group mt-2">
+					 
+					
+					<input type="number" data-ref="transportation" class="form-control pnum invexp" id="transportationval" name="transportation_v" placeholder="Estimated cost?" autocomplete="off" value="" required="required">
+				</div>
+				 
+			</div>
+	         
+	     
+		 	<div class="form-check mt-3">
+		 		
+				<input type="checkbox" class="form-check-input inp6 mustsel" id="installation" value="1" name="installation_k">
+				<label class="form-check-label" for="installation">Machinery installation</label>
+				<div class="form-group mt-2 d-none">
+					 
+					
+					<input type="number" data-ref="installation" class="form-control pnum invexp" id="installationval" name="installation_v" placeholder="Estimated cost?" autocomplete="off" value="">
+				</div>
+				 
+			</div>
+	         
+	     
+		 	<div class="form-check mt-3">
+		 		
+				<input type="checkbox" class="form-check-input inp6 mustsel" id="investment" value="1" name="investment_k">
+				<label class="form-check-label" for="investment">Other initial expenditure</label>
+				<div class="form-group mt-2 d-none">
+					 
+					
+					<input type="number" data-ref="investment" class="form-control pnum invexp" id="investmentval" name="investment_v" placeholder="Estimated cost?" autocomplete="off" value="">
+				</div>
+				 
+			</div>
+	         
+	     
+		<div class="alert alert-danger mt-3 invexpmsg" role="alert" style="">Sum total should be greater than zero.</div>  
+		
+	 
+	</div>
+
+
+When did you start your business?
+
+
+
+Navbar
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+{/* Image */}
+    <img src="https://iid.org.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fiid-logo.c76f2eba.png&w=1920&q=75" alt="" style={{
+        height:"50px",
+        width:"150px"
+    }}/>
+    {/* Image */}

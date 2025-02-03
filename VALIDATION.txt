@@ -1,0 +1,150 @@
+VALIDATION 
+
+import { useState } from 'react';
+import Step1 from '../Component/Step1';
+import Step2 from '../Component/Step2';
+import Step3 from '../Component/Step3';
+import Step4 from '../Component/Step4';
+import Step5 from '../Component/Step5';
+import Step6 from '../Component/Step6';
+import Step7 from '../Component/Step7';
+import Step8 from '../Component/Step8';
+import Step9 from '../Component/Step9';
+import Step10 from '../Component/Step10';
+import { useNavigate } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+const CreateFormReport = () => {
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({});
+  const [step, setStep] = useState(1);
+
+  const handleSubmit = () => {
+    window.alert("Form Submitted");
+    navigate(0);
+  };
+
+  const handleInputChange = (fieldName, value) => {
+    setFormData((prev) => ({
+      ...prev,
+      [fieldName]: value,
+    }));
+  };
+
+  // Step-wise validation
+  const validateStep = (step) => {
+    switch (step) {
+      case 1:
+        return formData.username && formData.email; // Example validation
+      case 2:
+        return formData.address; // Example for step 2
+      case 3:
+        return formData.phoneNumber; // Example for step 3
+      // Add more cases for each step...
+      case 10:
+        return formData.finalAgreement; // For step 10, check final form data
+      default:
+        return false;
+    }
+  };
+
+  const nextStep = () => {
+    if (validateStep(step)) {
+      if (step < 10) {
+        setStep((prevStep) => prevStep + 1);
+      } else {
+        console.log("Final Form Submitted:", formData);
+      }
+    } else {
+      window.alert("Please fill all required fields in this step.");
+    }
+  };
+
+  const prevStep = () => {
+    if (step > 1) {
+      setStep((prevStep) => prevStep - 1);
+    }
+  };
+
+  const renderStep = () => {
+    switch (step) {
+      case 1:
+        return <Step1 formData={formData} onInputChange={handleInputChange} />;
+      case 2:
+        return (
+          <>
+            <Step1 formData={formData} onInputChange={handleInputChange} />
+            <Step2 formData={formData} onInputChange={handleInputChange} />
+          </>
+        );
+      case 3:
+        return (
+          <>
+            <Step1 formData={formData} onInputChange={handleInputChange} />
+            <Step2 formData={formData} onInputChange={handleInputChange} />
+            <Step3 formData={formData} onInputChange={handleInputChange} />
+          </>
+        );
+      // Continue for other steps...
+      case 10:
+        return (
+          <>
+            <Step1 formData={formData} onInputChange={handleInputChange} />
+            <Step2 formData={formData} onInputChange={handleInputChange} />
+            <Step3 formData={formData} onInputChange={handleInputChange} />
+            <Step4 formData={formData} onInputChange={handleInputChange} />
+            <Step5 formData={formData} onInputChange={handleInputChange} />
+            <Step6 formData={formData} onInputChange={handleInputChange} />
+            <Step7 formData={formData} onInputChange={handleInputChange} />
+            <Step8 formData={formData} onInputChange={handleInputChange} />
+            <Step9 formData={formData} onInputChange={handleInputChange} />
+            <Step10 formData={formData} onInputChange={handleInputChange} />
+          </>
+        );
+      default:
+        return <Step1 formData={formData} onInputChange={handleInputChange} />;
+    }
+  };
+
+  return (
+    <>
+      <div className="container">
+        <div className="header content">
+          <h2 className="title">Create a Project Report</h2>
+          <p className="desc">
+            Submit with your loan application as a Startup or Small Medium Business
+          </p>
+        </div>
+      </div>
+
+      <form id="multiStepForm" className="row justify-content-center">
+        {/* Render the current step */}
+        {renderStep()}
+        <div className="col-md-5 d-flex align-items-center justify-content-between mx-auto my-4 p-5">
+          {/* Previous Step Button */}
+          <button type="button" className="btn btn-secondary" onClick={prevStep}>
+            Previous
+          </button>
+
+          {/* Save and Continue Button */}
+          {step === 10 ? (
+            <button type="button" className="btn btn-primary" onClick={handleSubmit}>
+              Submit
+            </button>
+          ) : (
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick={nextStep}
+              disabled={!validateStep(step)} // Disable if validation fails
+            >
+              Save and Continue
+            </button>
+          )}
+        </div>
+      </form>
+    </>
+  );
+};
+
+export default CreateFormReport;

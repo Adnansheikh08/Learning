@@ -1,0 +1,130 @@
+import React from "react";
+
+const Step3 = ({ formData, onInputChange }) => {
+  return (
+    <div className="form-step col-md-10 col-11 active" id="step-2">
+      <div className="row">
+        <div className="col-md-2 step-count">
+          <span>03</span>
+        </div>
+        <div className="col-md-10 py-2 px-4">
+          <h4>3. Please select your industry</h4>
+          <div className="df-img-btns mt-3">
+            <div className="row loannames rdo_select">
+              {/* Manufacturing */}
+              <div className="col-auto mb-3 mb-md-0">
+                <input
+                  type="radio"
+                  id="Manufacturing"
+                  name="industryType"
+                  value="Manufacturing"
+                  className="btn-check mustsel"
+                  autoComplete="off"
+                  onChange={(e) => onInputChange("step3Field", e.target.value)} // Update formData
+                  checked={formData.industryType === "Manufacturing"} // Bind checked state
+                />
+                <label
+                  htmlFor="Manufacturing"
+                  className="btn btn-outline-primary mr-3 text-center inp4 gap-2"
+                >
+                  <div className="d-flex align-items-center gap-1">
+                    <img
+                      src="https://www.finline.in/assets/v3/img/manufacturing.svg"
+                      alt=""
+                    />
+                    Manufacturing
+                  </div>
+                </label>
+              </div>
+
+              {/* Services */}
+              <div className="col-auto mb-3 mb-md-0">
+                <input
+                  type="radio"
+                  id="Services"
+                  name="industryType"
+                  value="Services"
+                  className="btn-check mustsel"
+                  autoComplete="off"
+                  onChange={(e) => onInputChange("step3Field", e.target.value)} // Update formData
+                  checked={formData.industryType === "Services"} // Bind checked state
+                />
+                <label
+                  htmlFor="Services"
+                  className="btn btn-outline-primary mr-3 text-center inp4 gap-2"
+                >
+                  <div className="d-flex align-items-center gap-1">
+                    <img
+                      src="https://www.finline.in/assets/v3/img/service.svg"
+                      alt=""
+                    />
+                    Services
+                  </div>
+                </label>
+              </div>
+
+              {/* Trading */}
+              <div className="col-auto mb-3 mb-md-0">
+                <input
+                  type="radio"
+                  id="Trading"
+                  name="industryType"
+                  value="Trading"
+                  className="btn-check mustsel"
+                  autoComplete="off"
+                  onChange={(e) => onInputChange("step3Field", e.target.value)} // Update formData
+                  checked={formData.industryType === "Trading"} // Bind checked state
+                />
+                <label
+                  htmlFor="Trading"
+                  className="btn btn-outline-primary mr-3 text-center inp4 gap-2"
+                >
+                  <div className="d-flex align-items-center gap-1">
+                    <img
+                      src="https://www.finline.in/assets/v3/img/trading.svg"
+                      alt=""
+                    />
+                    Trading
+                  </div>
+                </label>
+              </div>
+
+              {/* Agriculture */}
+              <div className="col-auto mb-3 mb-md-0">
+                <input
+                  type="radio"
+                  id="Agriculture"
+                  name="industryType"
+                  value="Agriculture"
+                  className="btn-check mustsel"
+                  autoComplete="off"
+                  onChange={(e) => onInputChange("step3Field", e.target.value)} // Update formData
+                  checked={formData.industryType === "Agriculture"} // Bind checked state
+                />
+                <label
+                  htmlFor="Agriculture"
+                  className="btn btn-outline-primary mr-3 text-center inp4 gap-2"
+                >
+                  <div className="d-flex align-items-center gap-1">
+                    <img
+                      src="https://www.finline.in/assets/v3/img/agriculture.svg"
+                      alt=""
+                    />
+                    Agriculture
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Step3;
+
+
+
+
+

@@ -1,0 +1,104 @@
+PRIOR CHANGES
+
+// <div className='container'>
+    //   <h1>Form in React</h1>
+    //   <form>
+    //      <label htmlFor='firstname'>First Name</label>
+    //      <input type='text' placeholder='Enter your First Name' />
+    //      <label htmlFor='firstname'>Last Name</label>
+    //      <input type='text' placeholder='Enter your Last Name' />
+    //      <label htmlFor='Email'>Email</label>
+    //      <input type='email' placeholder='Enter your Email' />
+    //      <label htmlFor='Contact'>Contact</label>
+    //      <input type='number' placeholder='Enter your Email' />
+    //      <label htmlFor='firstname'>Last Name</label>
+    //      <input type='radio' name='gender'/>Male
+    //      <input type='radio' name='gender'/>Female
+    //      <input type='radio' name='gender'/>Female
+
+    //     <label htmlFor='resume'>Resume</label>
+    //     <select>
+    //       <option value='math'>Math</option>
+    //       <option value='math'>Math</option>
+    //       <option value='math'>Math</option>
+    //     </select>
+    //     <label htmlFor='resume'>Resume</label>
+    //     <input type='file' placeholder='Select Resume' name='resume'/>
+    //     <label htmlFor='url'>URL</label>
+    //     <input type='text' name='url' placeholder='Enter your Image Url'/>
+    //     <label htmlFor='about'>About</label>
+    //     <textarea name='about' id='about' cols='30' rows='10' placeholder='Enter Description'></textarea>
+
+
+    //     <button type='button'>Reset</button>
+    //     <button type='submit'>Submit</button>
+
+    //   </form>
+
+
+
+    // </div>
+
+
+
+
+
+const [values,setValues] = useState({
+    firstname:'',
+    lastname:'',
+    email:'',
+    gender:'',
+    contact:'',
+    subject:'',
+    resume:'',
+    url:'',
+    about:''
+  })
+  const handleChange =(e)=>{
+      setValues({...values,[e.target.name]:[e.target.value]})
+  }
+  const handleSubmit = (e) =>{
+    e.preventDefault(),
+    console.log(values)
+  }
+  return (
+     <div className='bg-gray-500 text-center '>
+     <div className='container bg-white border px-10 py-20 w-[500px] text-center m-auto mt-4'>
+       <h1 className='text-center text-2xl text-red-500'>Form in React</h1>
+       <form onSubmit={handleSubmit}>
+          <label className='text-xl block w-full mt-[9px] mb-[9px] text-left text-black font-bold ' htmlFor='firstname'>First Name</label>
+          <input type='text' className=' input'placeholder='Enter your First Name' name='firstname' onChange={(e)=>handleChange(e)} />
+          <label className='text-xl block w-full mt-[9px] mb-[9px] text-left text-black font-bold ' htmlFor='firstname'>Last Name</label>
+          <input name='lastname' onChange={(e)=>handleChange(e)} type='text' placeholder='Enter your Last Name' />
+         <label className='text-xl block w-full mt-[9px] mb-[9px] text-left text-black font-bold ' htmlFor='Email'>Email</label>
+        <input name='email' onChange={(e)=>handleChange(e)} type='email' placeholder='Enter your Email' />
+          <label className='text-xl block w-full mt-[9px] mb-[9px] text-left text-black font-bold ' htmlFor='Contact'>Contact</label>
+          <input name='contact' onChange={(e)=>handleChange(e)} type='number' placeholder='Enter your Email' />
+          <label className='text-xl block w-full mt-[9px] mb-[9px] text-left text-black font-bold ' htmlFor='firstname'>Last Name</label>
+          <input name='gender'  onChange={(e)=>handleChange(e)} type='radio' />Male
+          <input onChange={(e)=>handleChange(e)} type='radio' name='gender'/>Female
+         <input onChange={(e)=>handleChange(e)} type='radio' name='gender'/>Female
+
+         <label className='text-xl block w-full mt-[9px] mb-[9px] text-left text-black font-bold ' htmlFor='resume'>Resume</label>
+        <select name='subject' onChange={(e)=>handleChange(e)}>
+           <option value='math'>Math</option>
+          <option value='math'>Math</option>
+           <option value='math'>Math</option>
+        </select>
+         <label className='text-xl block w-full mt-[9px] mb-[9px] text-left text-black font-bold ' htmlFor='resume'>Resume</label>
+         <input name='resume' onChange={(e)=>handleChange(e)}  type='file' placeholder='Select Resume' />
+        <label className='text-xl block w-full mt-[9px] mb-[9px] text-left text-black font-bold ' htmlFor='url'>URL</label>
+         <input name='url' onChange={(e)=>handleChange(e)} type='text' name='url' placeholder='Enter your Image Url'/>
+        <label className='text-xl block w-full mt-[9px] mb-[9px] text-left text-black font-bold ' htmlFor='about'>About</label>
+         <textarea name='about' onChange={(e)=>handleChange(e)} name='about'  cols='30' rows='10' placeholder='Enter Description'></textarea>
+        <div>
+          
+        </div>
+
+         <button type='button'>Reset</button>
+         <button type='submit'>Submit</button>
+
+       </form>
+       </div>
+     </div>
+  )
