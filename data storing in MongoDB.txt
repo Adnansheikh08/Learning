@@ -1,0 +1,64 @@
+This is how Im storing data in Mongo DB server
+
+
+
+
+{
+  "Step1": {
+    "name": "Sheikh Adnan"
+  },
+  "Step2": {
+    "details": "Helps Students to learn coding\n"
+  },
+  "Step3": {
+    "type": "Services"
+  },
+  "Step4": {
+    "industry": "mudra"
+  },
+  "Step5": {
+    "loan": "workingcapitalloan"
+  },
+  "Step6": {
+    "Stationary expenses": 10000,
+    "Electricity/water expense": 4534,
+    "Transportation cost": 3000,
+    "Rented Building": 0,
+    "Salary": 0,
+    "Purchase of consumables/ spare parts": 0,
+    "Repair and maintenance charges": 0,
+    "Telephone/postal & internet charge": 0,
+    "Marketing & advertising cost": 0
+  },
+  "Step7": {
+    "business": "Coaching"
+  },
+  "Step8": {
+    "Land": 200000,
+    "Vehicle": 100000,
+    "Shed/building": 0,
+    "Machinery": 0,
+    "Computers/printers/photocopier/other electronic gadgets,etc": {},
+    "Furniture & fixtures": 0,
+    "Electrification & electricity backup": 0,
+    "Racks & storage": 0,
+    "Other initial expenditure": 0,
+    "Software purchase": 0
+  },
+  "Step9": {
+    "education": "Graduate",
+    "year": "1990",
+    "name": "Adnan Sheikh",
+    "gender": "male",
+    "society": " General"
+  },
+  "Step10": {
+    "locality": "panchayat",
+    "pincode": "226001",
+    "address": "Aishbagh Lucknow",
+    "contact": "9515662211",
+    "email": "Adnansheikh3721@gmail.com",
+    "registration": "Partnership"
+  },
+  "__v": 0
+}
